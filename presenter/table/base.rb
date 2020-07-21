@@ -1,14 +1,10 @@
 module Presenter
   module Table
     class Base < Presenter::Base
-      attr_reader :lines, :line_presenter
+      attr_reader :lines
 
       def initialize(lines)
         @lines = lines
-      end
-
-      def call
-        raise NotImplementedError
       end
     end
   end

@@ -1,14 +1,12 @@
 module Presenter
   module Line
     class Horizontal < Presenter::Line::Base
-      def call
-        @object = [
-          left_factor,
-          operator,
-          right_factor,
-          assignment,
-          result
-        ].join(' ')
+      def render
+        render_tty.join(HORIZONTAL_DELIMETER)
+      end
+
+      def render_tty
+        attributes
       end
     end
   end

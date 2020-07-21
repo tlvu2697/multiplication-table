@@ -1,11 +1,14 @@
 module Presenter
   class Base
-    attr_reader :object
+    HORIZONTAL_DELIMETER = ' '.freeze
+    VERTICAL_DELIMETER = "\n".freeze
 
-    def self.call(*args, &block)
-      instance = new(*args, &block)
-      instance.call
-      instance
+    def render
+      raise NotImplementedError
+    end
+
+    def render_tty
+      raise NotImplementedError
     end
   end
 end

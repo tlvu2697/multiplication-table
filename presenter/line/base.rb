@@ -17,8 +17,8 @@ module Presenter
         @result = result
       end
 
-      def call
-        raise NotImplementedError
+      def attributes
+        [left_factor, operator, right_factor, assignment, result]
       end
     end
   end

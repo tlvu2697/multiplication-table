@@ -6,10 +6,6 @@ module Presenter
       def initialize(tables)
         @tables = tables
       end
-
-      def call
-        raise NotImplementedError
-      end
     end
   end
 end
